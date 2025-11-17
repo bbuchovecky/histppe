@@ -1,0 +1,13 @@
+&modelio
+  diri = "/glade/derecho/scratch/bbuchovecky/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.pAD/bld/ice"
+  diro = "/glade/derecho/scratch/bbuchovecky/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.pAD/run"
+  logfile = "ice.log.3583816.desched1.251111-100424"
+/
+&pio_inparm
+  pio_netcdf_format = "64bit_offset"
+  pio_numiotasks = -99
+  pio_rearranger = 1
+  pio_root = 1
+  pio_stride = 128
+  pio_typename = "pnetcdf"
+/

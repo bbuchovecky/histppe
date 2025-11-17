@@ -1,0 +1,32 @@
+Generating namelists for /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.002/I1850Clm50Bgc.CPLHIST.historical.coupPPE.test.002.AD
+ - Prestaging REFCASE (/glade/campaign/cesm/cesmdata/inputdata/cesm2_init/b.e21.B1850.f19_g17.CMIP6-piControl-2deg.001/0321-01-01) to /glade/derecho/scratch/bbuchovecky/I1850Clm50Bgc.CPLHIST.historical.coupPPE.test.002.AD/run
+Copy rpointer /glade/campaign/cesm/cesmdata/inputdata/cesm2_init/b.e21.B1850.f19_g17.CMIP6-piControl-2deg.001/0321-01-01/rpointer.ocn.restart
+Copy rpointer /glade/campaign/cesm/cesmdata/inputdata/cesm2_init/b.e21.B1850.f19_g17.CMIP6-piControl-2deg.001/0321-01-01/rpointer.ice
+Copy rpointer /glade/campaign/cesm/cesmdata/inputdata/cesm2_init/b.e21.B1850.f19_g17.CMIP6-piControl-2deg.001/0321-01-01/rpointer.lnd
+Copy rpointer /glade/campaign/cesm/cesmdata/inputdata/cesm2_init/b.e21.B1850.f19_g17.CMIP6-piControl-2deg.001/0321-01-01/rpointer.rof
+Copy rpointer /glade/campaign/cesm/cesmdata/inputdata/cesm2_init/b.e21.B1850.f19_g17.CMIP6-piControl-2deg.001/0321-01-01/rpointer.atm
+Copy rpointer /glade/campaign/cesm/cesmdata/inputdata/cesm2_init/b.e21.B1850.f19_g17.CMIP6-piControl-2deg.001/0321-01-01/rpointer.ocn.tavg.5
+Copy rpointer /glade/campaign/cesm/cesmdata/inputdata/cesm2_init/b.e21.B1850.f19_g17.CMIP6-piControl-2deg.001/0321-01-01/rpointer.glc
+Copy rpointer /glade/campaign/cesm/cesmdata/inputdata/cesm2_init/b.e21.B1850.f19_g17.CMIP6-piControl-2deg.001/0321-01-01/rpointer.ocn.ovf
+Copy rpointer /glade/campaign/cesm/cesmdata/inputdata/cesm2_init/b.e21.B1850.f19_g17.CMIP6-piControl-2deg.001/0321-01-01/rpointer.drv
+Creating component namelists
+   Calling /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/src/components/data_comps/datm/cime_config/buildnml
+   ....  Obtaining DATM model domain info from first stream file: CPLHISTForcing.Solar
+   Calling /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/components/clm//cime_config/buildnml
+   Calling /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/src/components/stub_comps/sice/cime_config/buildnml
+   Calling /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/src/components/stub_comps/socn/cime_config/buildnml
+   Calling /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/components/mosart//cime_config/buildnml
+   Running /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/components/cism//cime_config/buildnml 
+   Calling /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/src/components/stub_comps/swav/cime_config/buildnml
+   Calling /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/src/components/stub_comps/sesp/cime_config/buildnml
+   Calling /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/src/drivers/mct/cime_config/buildnml
+Finished creating component namelists
+-------------------------------------------------------------------------
+ - Prestage required restarts into /glade/derecho/scratch/bbuchovecky/I1850Clm50Bgc.CPLHIST.historical.coupPPE.test.002.AD/run
+ - Case input data directory (DIN_LOC_ROOT) is /glade/campaign/cesm/cesmdata/inputdata 
+ - Checking for required input datasets in DIN_LOC_ROOT
+-------------------------------------------------------------------------
+2025-10-29 06:51:59 MODEL EXECUTION BEGINS HERE
+run command is mpiexec  --label  --line-buffer  -n 1664 /glade/derecho/scratch/bbuchovecky/I1850Clm50Bgc.CPLHIST.historical.coupPPE.test.002.AD/bld/cesm.exe  >> cesm.log.$LID 2>&1  
+ERROR: RUN FAIL: Command 'mpiexec  --label  --line-buffer  -n 1664 /glade/derecho/scratch/bbuchovecky/I1850Clm50Bgc.CPLHIST.historical.coupPPE.test.002.AD/bld/cesm.exe  >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/derecho/scratch/bbuchovecky/I1850Clm50Bgc.CPLHIST.historical.coupPPE.test.002.AD/run/cesm.log.3471818.desched1.251029-065152

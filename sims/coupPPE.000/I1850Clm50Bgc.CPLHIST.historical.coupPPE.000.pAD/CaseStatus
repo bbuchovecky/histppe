@@ -1,0 +1,219 @@
+2025-11-08 18:49:58: case.setup starting 
+ ---------------------------------------------------
+2025-11-08 18:50:00: case.setup success 
+ ---------------------------------------------------
+2025-11-08 18:50:00: case.setup starting 
+ ---------------------------------------------------
+2025-11-08 18:50:02: case.setup success 
+ ---------------------------------------------------
+2025-11-08 18:50:02: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+ ---------------------------------------------------
+2025-11-08 18:50:03: xmlchange success <command> ./xmlchange CONTINUE_RUN=False  </command>
+ ---------------------------------------------------
+2025-11-08 18:50:03: xmlchange success <command> ./xmlchange PROJECT=UWAS0155  </command>
+ ---------------------------------------------------
+2025-11-08 18:50:03: xmlchange success <command> ./xmlchange JOB_PRIORITY=regular  </command>
+ ---------------------------------------------------
+2025-11-08 18:50:03: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=04:30:00 --subgroup case.run  </command>
+ ---------------------------------------------------
+2025-11-08 18:50:04: xmlchange success <command> ./xmlchange RUN_STARTDATE=0001-01-01  </command>
+ ---------------------------------------------------
+2025-11-08 18:50:04: xmlchange success <command> ./xmlchange STOP_N=100,STOP_OPTION=nyears  </command>
+ ---------------------------------------------------
+2025-11-08 18:50:04: xmlchange success <command> ./xmlchange CLM_ACCELERATED_SPINUP=off  </command>
+ ---------------------------------------------------
+2025-11-08 18:50:05: xmlchange success <command> ./xmlchange RUN_REFCASE=I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD  </command>
+ ---------------------------------------------------
+2025-11-08 18:50:05: xmlchange success <command> ./xmlchange GET_REFCASE=True  </command>
+ ---------------------------------------------------
+2025-11-08 18:50:05: xmlchange success <command> ./xmlchange RUN_REFDIR=/glade/derecho/scratch/bbuchovecky/archive/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD/rest/0161-01-01-00000  </command>
+ ---------------------------------------------------
+2025-11-08 18:50:06: xmlchange success <command> ./xmlchange RUN_REFDATE=0161-01-01  </command>
+ ---------------------------------------------------
+2025-11-08 18:50:06: case.build starting 
+ ---------------------------------------------------
+CESM version is release-cesm2.1.5
+Processing externals description file : Externals.cfg (/glade/u/home/bbuchovecky/cesm_source/cesm2.1.5)
+Processing externals description file : Externals_CAM.cfg (/glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/components/cam)
+Processing externals description file : Externals_CISM.cfg (/glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/components/cism)
+Processing externals description file : Externals_CLM.cfg (/glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/components/clm)
+Processing externals description file : Externals_POP.cfg (/glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/components/pop)
+Checking local status of required & optional components: cam, chem_proc, carma, clubb, cosp2, cice, cime, cism, source_cism, clm, fates, mosart, pop, cvmix, marbl, rtm, ww3, 
+    ./cime
+        clean sandbox, on cime5.6.49
+    ./components/cam
+        clean sandbox, on cam_cesm2_1_rel_60
+    ./components/cam/chem_proc
+        clean sandbox, on tools/proc_atm/chem_proc/release_tags/chem_proc5_0_03_rel
+    ./components/cam/src/physics/carma/base
+        clean sandbox, on carma/release_tags/carma3_49_rel
+    ./components/cam/src/physics/clubb
+        clean sandbox, on vendor_clubb_r8099_n03
+    ./components/cam/src/physics/cosp2/src
+        clean sandbox, on v2.1.4cesm
+    ./components/cice
+        clean sandbox, on cice5_cesm2_1_1_20231220
+    ./components/cism
+        clean sandbox, on cism-release-cesm2.1.2_04
+    ./components/cism/source_cism
+        clean sandbox, on release-cism2.1.04
+    ./components/clm
+        clean sandbox, on release-clm5.0.37
+    ./components/clm/src/fates
+        clean sandbox, on sci.1.30.0_api.8.0.0
+    ./components/mosart
+        clean sandbox, on release-cesm2.0.04
+    ./components/pop
+        clean sandbox, on pop2_cesm2_1_rel_n15
+    ./components/pop/externals/CVMix
+        clean sandbox, on v0.93-beta
+    ./components/pop/externals/MARBL
+        clean sandbox, on cesm2.1-n00
+    ./components/rtm
+        clean sandbox, on release-cesm2.0.04
+    ./components/ww3
+        clean sandbox, on ww3_181001
+2025-11-08 18:55:55: case.build success 
+ ---------------------------------------------------
+2025-11-08 18:55:55: case.submit starting 
+ ---------------------------------------------------
+2025-11-08 18:56:01: case.submit success case.run:3571928.desched1, case.st_archive:3571929.desched1
+ ---------------------------------------------------
+2025-11-09 08:34:34: case.run starting 
+ ---------------------------------------------------
+2025-11-09 08:34:41: model execution starting 
+ ---------------------------------------------------
+2025-11-09 12:00:55: model execution success 
+ ---------------------------------------------------
+2025-11-09 12:00:55: case.run success 
+ ---------------------------------------------------
+2025-11-09 12:01:37: st_archive starting 
+ ---------------------------------------------------
+2025-11-09 12:01:48: st_archive success 
+ ---------------------------------------------------
+2025-11-09 12:02:41: xmlchange success <command> ./xmlchange CONTINUE_RUN=True  </command>
+ ---------------------------------------------------
+2025-11-09 12:02:41: xmlchange success <command> ./xmlchange STOP_N=60  </command>
+ ---------------------------------------------------
+2025-11-09 12:02:42: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=2:45:00 --subgroup case.run  </command>
+ ---------------------------------------------------
+2025-11-09 12:02:42: case.submit starting 
+ ---------------------------------------------------
+2025-11-09 12:02:49: case.submit success case.run:3573597.desched1, case.st_archive:3573598.desched1
+ ---------------------------------------------------
+2025-11-09 14:42:47: case.run starting 
+ ---------------------------------------------------
+2025-11-09 14:42:54: model execution starting 
+ ---------------------------------------------------
+2025-11-09 16:45:21: model execution success 
+ ---------------------------------------------------
+2025-11-09 16:45:22: case.run success 
+ ---------------------------------------------------
+2025-11-09 16:45:55: st_archive starting 
+ ---------------------------------------------------
+2025-11-09 16:46:03: st_archive success 
+ ---------------------------------------------------
+2025-11-09 16:46:59: xmlchange success <command> ./xmlchange CONTINUE_RUN=True  </command>
+ ---------------------------------------------------
+2025-11-09 16:47:00: xmlchange success <command> ./xmlchange STOP_N=60  </command>
+ ---------------------------------------------------
+2025-11-09 16:47:00: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=2:45:00 --subgroup case.run  </command>
+ ---------------------------------------------------
+2025-11-09 16:47:00: case.submit starting 
+ ---------------------------------------------------
+2025-11-09 16:47:08: case.submit success case.run:3574226.desched1, case.st_archive:3574227.desched1
+ ---------------------------------------------------
+2025-11-09 16:47:45: case.run starting 
+ ---------------------------------------------------
+2025-11-09 16:47:53: model execution starting 
+ ---------------------------------------------------
+2025-11-09 18:49:57: model execution success 
+ ---------------------------------------------------
+2025-11-09 18:49:57: case.run success 
+ ---------------------------------------------------
+2025-11-09 18:50:28: st_archive starting 
+ ---------------------------------------------------
+2025-11-09 18:50:36: st_archive success 
+ ---------------------------------------------------
+2025-11-09 18:51:33: xmlchange success <command> ./xmlchange CONTINUE_RUN=True  </command>
+ ---------------------------------------------------
+2025-11-09 18:51:33: xmlchange success <command> ./xmlchange STOP_N=60  </command>
+ ---------------------------------------------------
+2025-11-09 18:51:33: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=2:45:00 --subgroup case.run  </command>
+ ---------------------------------------------------
+2025-11-09 18:51:34: case.submit starting 
+ ---------------------------------------------------
+2025-11-09 18:51:41: case.submit success case.run:3574429.desched1, case.st_archive:3574430.desched1
+ ---------------------------------------------------
+2025-11-10 05:20:01: case.run starting 
+ ---------------------------------------------------
+2025-11-10 05:20:09: model execution starting 
+ ---------------------------------------------------
+2025-11-10 07:22:13: model execution success 
+ ---------------------------------------------------
+2025-11-10 07:22:13: case.run success 
+ ---------------------------------------------------
+2025-11-10 07:51:35: st_archive starting 
+ ---------------------------------------------------
+2025-11-10 07:51:43: st_archive success 
+ ---------------------------------------------------
+2025-11-10 07:52:44: xmlchange success <command> ./xmlchange CONTINUE_RUN=True  </command>
+ ---------------------------------------------------
+2025-11-10 07:52:44: xmlchange success <command> ./xmlchange STOP_N=60  </command>
+ ---------------------------------------------------
+2025-11-10 07:52:45: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=2:45:00 --subgroup case.run  </command>
+ ---------------------------------------------------
+2025-11-10 07:52:45: case.submit starting 
+ ---------------------------------------------------
+2025-11-10 07:52:52: case.submit success case.run:3578687.desched1, case.st_archive:3578688.desched1
+ ---------------------------------------------------
+2025-11-10 16:20:35: case.run starting 
+ ---------------------------------------------------
+2025-11-10 16:20:41: model execution starting 
+ ---------------------------------------------------
+2025-11-10 18:21:37: model execution success 
+ ---------------------------------------------------
+2025-11-10 18:21:38: case.run success 
+ ---------------------------------------------------
+2025-11-10 18:28:56: st_archive starting 
+ ---------------------------------------------------
+2025-11-10 18:29:04: st_archive success 
+ ---------------------------------------------------
+2025-11-10 18:30:06: xmlchange success <command> ./xmlchange CONTINUE_RUN=True  </command>
+ ---------------------------------------------------
+2025-11-10 18:30:07: xmlchange success <command> ./xmlchange STOP_N=60  </command>
+ ---------------------------------------------------
+2025-11-10 18:30:07: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=2:45:00 --subgroup case.run  </command>
+ ---------------------------------------------------
+2025-11-10 18:30:07: case.submit starting 
+ ---------------------------------------------------
+2025-11-10 18:30:14: case.submit success case.run:3582893.desched1, case.st_archive:3582894.desched1
+ ---------------------------------------------------
+2025-11-11 00:40:13: case.run starting 
+ ---------------------------------------------------
+2025-11-11 00:40:19: model execution starting 
+ ---------------------------------------------------
+2025-11-11 02:42:41: model execution success 
+ ---------------------------------------------------
+2025-11-11 02:42:41: case.run success 
+ ---------------------------------------------------
+2025-11-11 02:43:44: st_archive starting 
+ ---------------------------------------------------
+2025-11-11 02:43:51: st_archive success 
+ ---------------------------------------------------
+2025-11-11 02:44:49: case.submit starting 
+ ---------------------------------------------------
+2025-11-11 02:44:56: case.submit success case.run:3583816.desched1, case.st_archive:3583817.desched1
+ ---------------------------------------------------
+2025-11-11 10:04:24: case.run starting 
+ ---------------------------------------------------
+2025-11-11 10:04:31: model execution starting 
+ ---------------------------------------------------
+2025-11-11 12:06:26: model execution success 
+ ---------------------------------------------------
+2025-11-11 12:06:26: case.run success 
+ ---------------------------------------------------
+2025-11-11 12:11:41: st_archive starting 
+ ---------------------------------------------------
+2025-11-11 12:11:50: st_archive success 
+ ---------------------------------------------------

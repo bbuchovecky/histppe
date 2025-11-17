@@ -1,0 +1,34 @@
+&datm_nml
+  decomp = "1d"
+  factorfn = "null"
+  force_prognostic_true = .false.
+  iradsw = 1
+  presaero = .true.
+  restfilm = "undefined"
+  restfils = "undefined"
+  wiso_datm = .false.
+/
+&shr_strdata_nml
+  datamode = "COPYALL"
+  domainfile = "null"
+  dtlimit = 3.0, 3.0, 3.0, 3.0, 3.0, 3.0
+  fillalgo = "nn", "nn", "nn", "nn", "nn", "nn"
+  fillmask = "nomask", "nomask", "nomask", "nomask", "nomask", "nomask"
+  fillread = "NOT_SET", "NOT_SET", "NOT_SET", "NOT_SET", "NOT_SET", "NOT_SET"
+  fillwrite = "NOT_SET", "NOT_SET", "NOT_SET", "NOT_SET", "NOT_SET", "NOT_SET"
+  mapalgo = "bilinear", "bilinear", "bilinear", "bilinear", "bilinear",
+      "bilinear"
+  mapmask = "nomask", "nomask", "nomask", "nomask", "nomask", "nomask"
+  mapread = "NOT_SET", "NOT_SET", "NOT_SET", "NOT_SET", "NOT_SET", "NOT_SET"
+  mapwrite = "NOT_SET", "NOT_SET", "NOT_SET", "NOT_SET", "NOT_SET", "NOT_SET"
+  readmode = "single", "single", "single", "single", "single", "single"
+  streams = "datm.streams.txt.CPLHISTForcing.Solar 1850 1850 1869",
+      "datm.streams.txt.CPLHISTForcing.nonSolarFlux 1850 1850 1869",
+      "datm.streams.txt.CPLHISTForcing.State3hr 1850 1850 1869",
+      "datm.streams.txt.CPLHISTForcing.State1hr 1850 1850 1869",
+      "datm.streams.txt.presaero.cplhist 1850 1850 1869",
+      "datm.streams.txt.topo.cplhist 1850 1850 1869"
+  taxmode = "cycle", "cycle", "cycle", "cycle", "cycle", "cycle"
+  tintalgo = "nearest", "nearest", "linear", "linear", "nearest", "nearest"
+  vectors = "null"
+/

@@ -1,0 +1,13 @@
+&modelio
+  diri = "/glade/derecho/scratch/bbuchovecky/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD/bld/esp"
+  diro = "/glade/derecho/scratch/bbuchovecky/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD/run"
+  logfile = "esp.log.3571834.desched1.251108-180647"
+/
+&pio_inparm
+  pio_netcdf_format = ""
+  pio_numiotasks = -99
+  pio_rearranger = -99
+  pio_root = -99
+  pio_stride = -99
+  pio_typename = "nothing"
+/

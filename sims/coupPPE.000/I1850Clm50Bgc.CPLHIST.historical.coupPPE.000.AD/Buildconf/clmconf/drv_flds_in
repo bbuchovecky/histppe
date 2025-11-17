@@ -1,0 +1,14 @@
+&drydep_inparm
+/
+&megan_emis_nl
+/
+&fire_emis_nl
+/
+&carma_inparm
+/
+!#--------------------------------------------------------------------------------------------------------------------------
+!# drv_flds_in:: Comment:
+!# This namelist was created using the following command-line:
+!#     /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/components/clm/bld/CLM build-namelist -cimeroot /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/scripts/Tools/../.. -infile /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.000/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD/Buildconf/clmconf/namelist -csmdata /glade/campaign/cesm/cesmdata/inputdata -inputdata /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.000/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD/Buildconf/clm.input_data_list -ignore_ic_year -namelist &clm_inparm  start_ymd=00010101 /  -use_case 1850_control -res 1.9x2.5 -clm_start_type startup -envxml_dir /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.000/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD -l_ncpl 48 -lnd_frac /glade/campaign/cesm/cesmdata/inputdata/share/domains/domain.lnd.fv1.9x2.5_gx1v7.181205.nc -glc_nec 10 -co2_ppmv 284.7 -co2_type constant -config /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.000/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD/Buildconf/clmconf/config_cache.xml -bgc bgc -crop -clm_accelerated_spinup on -lnd_tuning_mode clm5_0_CRUv7 -mask gx1v7
+!# For help on options use: /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/components/clm/bld/CLM build-namelist -help
+!#--------------------------------------------------------------------------------------------------------------------------

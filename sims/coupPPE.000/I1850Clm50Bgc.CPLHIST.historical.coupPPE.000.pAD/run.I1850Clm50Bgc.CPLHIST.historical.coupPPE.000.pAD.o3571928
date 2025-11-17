@@ -1,0 +1,32 @@
+Generating namelists for /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.000/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.pAD
+ - Prestaging REFCASE (/glade/derecho/scratch/bbuchovecky/archive/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD/rest/0161-01-01-00000) to /glade/derecho/scratch/bbuchovecky/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.pAD/run
+Copy rpointer /glade/derecho/scratch/bbuchovecky/archive/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD/rest/0161-01-01-00000/rpointer.atm
+Copy rpointer /glade/derecho/scratch/bbuchovecky/archive/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD/rest/0161-01-01-00000/rpointer.lnd
+Copy rpointer /glade/derecho/scratch/bbuchovecky/archive/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD/rest/0161-01-01-00000/rpointer.ocn.tavg.5
+Copy rpointer /glade/derecho/scratch/bbuchovecky/archive/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD/rest/0161-01-01-00000/rpointer.ocn.ovf
+Copy rpointer /glade/derecho/scratch/bbuchovecky/archive/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD/rest/0161-01-01-00000/rpointer.rof
+Copy rpointer /glade/derecho/scratch/bbuchovecky/archive/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD/rest/0161-01-01-00000/rpointer.glc
+Copy rpointer /glade/derecho/scratch/bbuchovecky/archive/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD/rest/0161-01-01-00000/rpointer.drv
+Copy rpointer /glade/derecho/scratch/bbuchovecky/archive/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD/rest/0161-01-01-00000/rpointer.ocn.restart
+Copy rpointer /glade/derecho/scratch/bbuchovecky/archive/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.AD/rest/0161-01-01-00000/rpointer.ice
+Creating component namelists
+   Calling /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/src/components/data_comps/datm/cime_config/buildnml
+   ....  Obtaining DATM model domain info from first stream file: CPLHISTForcing.Solar
+   Calling /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/../components/clm//cime_config/buildnml
+   Calling /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/src/components/stub_comps/sice/cime_config/buildnml
+   Calling /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/src/components/stub_comps/socn/cime_config/buildnml
+   Calling /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/../components/mosart//cime_config/buildnml
+   Running /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/../components/cism//cime_config/buildnml 
+   Calling /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/src/components/stub_comps/swav/cime_config/buildnml
+   Calling /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/src/components/stub_comps/sesp/cime_config/buildnml
+   Calling /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/src/drivers/mct/cime_config/buildnml
+Finished creating component namelists
+-------------------------------------------------------------------------
+ - Prestage required restarts into /glade/derecho/scratch/bbuchovecky/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.pAD/run
+ - Case input data directory (DIN_LOC_ROOT) is /glade/campaign/cesm/cesmdata/inputdata 
+ - Checking for required input datasets in DIN_LOC_ROOT
+-------------------------------------------------------------------------
+2025-11-09 08:34:41 MODEL EXECUTION BEGINS HERE
+run command is mpiexec  --label  --line-buffer  -n 1664 /glade/derecho/scratch/bbuchovecky/I1850Clm50Bgc.CPLHIST.historical.coupPPE.000.pAD/bld/cesm.exe  >> cesm.log.$LID 2>&1  
+2025-11-09 12:00:55 MODEL EXECUTION HAS FINISHED
+check for resubmit

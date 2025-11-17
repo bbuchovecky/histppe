@@ -1,0 +1,80 @@
+-----------------------------
+TETHER COMMANDS:
+-----------------------------
+./setupIHIST.sh coupPPE.test.005
+-----------------------------
+/glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.005/setupIHIST
+bbuchovecky
+25-11-03T10:47:52
+caseroot: /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.005/IHistClm50Bgc.CPLHIST.historical.coupPPE.test.005.IHIST
+Did not find an alias or longname compset match for HIST_DATM%CPLHIST_CLM50%BGC-CROP_SICE_SOCN_MOSART_CISM2%NOEVOLVE_SWAV 
+Compset forcing is Historic transient 
+ATM component is  Data driven ATM  Coupler hist data set (in this mode, it is strongly recommended that the model domain and the coupler history forcing are on the same domain)
+LND component is clm5.0:BGC (vert. resol. CN and methane) with prognostic crop:
+ICE component is Stub ice component
+OCN component is Stub ocn component
+ROF component is MOSART: MOdel for Scale Adaptive River Transport
+GLC component is cism2 (default, higher-order, can run in parallel):cism ice evolution turned off (this is the standard configuration unless you're explicitly interested in ice evolution):
+WAV component is Stub wave component
+ESP component is 
+Pes     specification file is /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/../components/clm//cime_config/config_pes.xml
+Compset specific settings: name is RUN_STARTDATE and value is 1850-01-01
+Machine is derecho
+Pes setting: grid match    is l%1.9x2.5 
+Pes setting: machine match is derecho 
+Pes setting: grid          is a%1.9x2.5_l%1.9x2.5_oi%null_r%r05_g%gland4_w%null_m%gx1v7 
+Pes setting: compset       is HIST_DATM%CPLHIST_CLM50%BGC-CROP_SICE_SOCN_MOSART_CISM2%NOEVOLVE_SWAV 
+Pes setting: tasks       is {'NTASKS_ATM': -1, 'NTASKS_LND': -12, 'NTASKS_ROF': -12, 'NTASKS_ICE': -12, 'NTASKS_OCN': -12, 'NTASKS_GLC': -12, 'NTASKS_WAV': -12, 'NTASKS_CPL': -12} 
+Pes setting: threads     is {'NTHRDS_ATM': 1, 'NTHRDS_LND': 1, 'NTHRDS_ROF': 1, 'NTHRDS_ICE': 1, 'NTHRDS_OCN': 1, 'NTHRDS_GLC': 1, 'NTHRDS_WAV': 1, 'NTHRDS_CPL': 1} 
+Pes setting: rootpe      is {'ROOTPE_ATM': 0, 'ROOTPE_LND': -1, 'ROOTPE_ROF': -1, 'ROOTPE_ICE': -1, 'ROOTPE_OCN': -1, 'ROOTPE_GLC': -1, 'ROOTPE_WAV': -1, 'ROOTPE_CPL': -1} 
+Pes setting: pstrid      is {} 
+Pes other settings: {}
+Pes comments: none
+ Compset is: HIST_DATM%CPLHIST_CLM50%BGC-CROP_SICE_SOCN_MOSART_CISM2%NOEVOLVE_SWAV 
+ Grid is: a%1.9x2.5_l%1.9x2.5_oi%null_r%r05_g%gland4_w%null_m%gx1v7 
+ Components in compset are: ['datm', 'clm', 'sice', 'socn', 'mosart', 'cism', 'swav', 'sesp', 'drv', 'dart'] 
+No charge_account info available, using value from PROJECT
+No project info available
+
+Directory /glade/derecho/scratch/bbuchovecky/IHistClm50Bgc.CPLHIST.historical.coupPPE.test.005.IHIST/bld already exists, (r)eplace, (a)bort, or (u)se existing?Traceback (most recent call last):
+  File "/glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/scripts/./create_newcase", line 218, in <module>
+    _main_func(__doc__)
+  File "/glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/scripts/./create_newcase", line 206, in _main_func
+    case.create(casename, srcroot, compset, grid, user_mods_dir=user_mods_dir,
+  File "/glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/scripts/Tools/../../scripts/lib/CIME/case/case.py", line 1444, in create
+    self.configure(compset_name, grid_name, machine_name=machine_name,
+  File "/glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/scripts/Tools/../../scripts/lib/CIME/case/case.py", line 917, in configure
+    response = input("\nDirectory {} already exists, (r)eplace, (a)bort, or (u)se existing?".format(wdir))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+EOFError: EOF when reading a line
+./setupIHIST.sh: line 46: cd: /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.005/IHistClm50Bgc.CPLHIST.historical.coupPPE.test.005.IHIST: No such file or directory
+./setupIHIST.sh: line 47: ./case.setup: No such file or directory
+cp: target './SourceMods/src.clm/' is not a directory
+cp: cannot create regular file './SourceMods/src.clm/': No such file or directory
+./setupIHIST.sh: line 70: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 71: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 72: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 73: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 74: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 75: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 76: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 77: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 78: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 79: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 84: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 85: ./xmlchange: No such file or directory
+ls: cannot access '/glade/derecho/scratch/bbuchovecky/archive//rest': No such file or directory
+./setupIHIST.sh: line 90: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 91: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 94: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 95: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 96: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 97: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 98: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 99: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 100: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 101: ./xmlchange: No such file or directory
+./setupIHIST.sh: line 104: ./case.build: No such file or directory
+-----------------------------
+SUBMITTING /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.005/IHistClm50Bgc.CPLHIST.historical.coupPPE.test.005.IHIST
+-----------------------------

@@ -1,0 +1,22 @@
+! Users should add all user specific namelist changes below in the form of 
+! namelist_var = new_namelist_value 
+ 
+!----------------------------------------------------------------------------------
+!----------------------------------HISTORY FILES-----------------------------------
+!----History files (h0): monthly output at grid level
+! all default output variables, excluding extraneous vertically resolved variables
+nhtfrq(1)=0
+mfilt(1)=1
+
+! Exclude some aerosol, cloud droplet, and wet removal scheme variables
+fexcl1 = 'bc_a1','bc_a4','bc_c1','bc_c4','dst_a1','dst_a2','dst_a3','dst_c1','dst_c2','dst_c3','ncl_a1','ncl_a2','ncl_a3','ncl_c1','ncl_c2','ncl_c3','num_a1','num_a2','num_a3','num_a4','num_c1','num_c2','num_c3','num_c4','pom_a1','pom_a4','pom_c1','pom_c4','so4_a1','so4_a2','so4_a3','so4_c1','so4_c2','so4_c3','soa_a1','soa_a2','soa_c1','soa_c2','ANRAIN','AREI','AREL','AWNC','AWNI','ADRAIN','ADSNOW','ANSNOW','NUMICE','NUMLIQ','NUMRAI','NUMSNO','DTWR_H2O2','DTWR_H2SO4','DTWR_SO2','VQ','UQ'
+
+!----History files (h1): additional user-specified monthly output at grid level
+nhtfrq(2)=0
+mfilt(2)=1
+fincl2 = 'SST','VQ','UQ','uIVT','vIVT'
+
+!----History files (h2): daily output at grid level
+nhtfrq(3)=-24
+mfilt(3)=365
+fincl3 = 'FLDS','FLNS','FSDS','FSNS','LHFLX','SHFLX',    'PRECC','PRECL','QREFHT','RHREFHT','uIVT','vIVT',    'TREFHT','TREFHTMN','TREFHTMX','TS','TSMN','TSMX',    'PBLH','PS','PSL'

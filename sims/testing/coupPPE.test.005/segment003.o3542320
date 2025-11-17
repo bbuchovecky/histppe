@@ -1,0 +1,63 @@
+-----------------------------
+TETHER COMMANDS:
+-----------------------------
+./setupIHIST.sh coupPPE.test.005
+-----------------------------
+/glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.005/setupIHIST
+bbuchovecky
+25-11-03T10:54:30
+caseroot: /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.005/IHistClm50Bgc.CPLHIST.historical.coupPPE.test.005.IHIST
+Did not find an alias or longname compset match for HIST_DATM%CPLHIST_CLM50%BGC-CROP_SICE_SOCN_MOSART_CISM2%NOEVOLVE_SWAV 
+Compset forcing is Historic transient 
+ATM component is  Data driven ATM  Coupler hist data set (in this mode, it is strongly recommended that the model domain and the coupler history forcing are on the same domain)
+LND component is clm5.0:BGC (vert. resol. CN and methane) with prognostic crop:
+ICE component is Stub ice component
+OCN component is Stub ocn component
+ROF component is MOSART: MOdel for Scale Adaptive River Transport
+GLC component is cism2 (default, higher-order, can run in parallel):cism ice evolution turned off (this is the standard configuration unless you're explicitly interested in ice evolution):
+WAV component is Stub wave component
+ESP component is 
+Pes     specification file is /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/../components/clm//cime_config/config_pes.xml
+Compset specific settings: name is RUN_STARTDATE and value is 1850-01-01
+Machine is derecho
+Pes setting: grid match    is l%1.9x2.5 
+Pes setting: machine match is derecho 
+Pes setting: grid          is a%1.9x2.5_l%1.9x2.5_oi%null_r%r05_g%gland4_w%null_m%gx1v7 
+Pes setting: compset       is HIST_DATM%CPLHIST_CLM50%BGC-CROP_SICE_SOCN_MOSART_CISM2%NOEVOLVE_SWAV 
+Pes setting: tasks       is {'NTASKS_ATM': -1, 'NTASKS_LND': -12, 'NTASKS_ROF': -12, 'NTASKS_ICE': -12, 'NTASKS_OCN': -12, 'NTASKS_GLC': -12, 'NTASKS_WAV': -12, 'NTASKS_CPL': -12} 
+Pes setting: threads     is {'NTHRDS_ATM': 1, 'NTHRDS_LND': 1, 'NTHRDS_ROF': 1, 'NTHRDS_ICE': 1, 'NTHRDS_OCN': 1, 'NTHRDS_GLC': 1, 'NTHRDS_WAV': 1, 'NTHRDS_CPL': 1} 
+Pes setting: rootpe      is {'ROOTPE_ATM': 0, 'ROOTPE_LND': -1, 'ROOTPE_ROF': -1, 'ROOTPE_ICE': -1, 'ROOTPE_OCN': -1, 'ROOTPE_GLC': -1, 'ROOTPE_WAV': -1, 'ROOTPE_CPL': -1} 
+Pes setting: pstrid      is {} 
+Pes other settings: {}
+Pes comments: none
+ Compset is: HIST_DATM%CPLHIST_CLM50%BGC-CROP_SICE_SOCN_MOSART_CISM2%NOEVOLVE_SWAV 
+ Grid is: a%1.9x2.5_l%1.9x2.5_oi%null_r%r05_g%gland4_w%null_m%gx1v7 
+ Components in compset are: ['datm', 'clm', 'sice', 'socn', 'mosart', 'cism', 'swav', 'sesp', 'drv', 'dart'] 
+No charge_account info available, using value from PROJECT
+No project info available
+cesm model version found: release-cesm2.1.5
+Batch_system_type is pbs
+job is case.run USER_REQUESTED_WALLTIME None USER_REQUESTED_QUEUE None WALLTIME_FORMAT %H:%M:%S
+job is case.st_archive USER_REQUESTED_WALLTIME None USER_REQUESTED_QUEUE None WALLTIME_FORMAT %H:%M:%S
+ Creating Case directory /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.005/IHistClm50Bgc.CPLHIST.historical.coupPPE.test.005.IHIST
+/glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.005/IHistClm50Bgc.CPLHIST.historical.coupPPE.test.005.IHIST/env_mach_specific.xml already exists, delete to replace
+job is case.run USER_REQUESTED_WALLTIME None USER_REQUESTED_QUEUE None WALLTIME_FORMAT %H:%M:%S
+Creating batch scripts
+Writing case.run script from input template /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/config/cesm/machines/template.case.run
+Creating file .case.run
+Writing case.st_archive script from input template /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/config/cesm/machines/template.st_archive
+Creating file case.st_archive
+Creating user_nl_xxx files for components and cpl
+If an old case build already exists, might want to run 'case.build --clean' before building
+You can now run './preview_run' to get more info on how your case will be run
+cp: -r not specified; omitting directory '/glade/u/home/bbuchovecky/projects/cpl_ppe_co2/pert/testing/coupPPE.test.005/srcmods/perturbed/all/cam'
+cp: -r not specified; omitting directory '/glade/u/home/bbuchovecky/projects/cpl_ppe_co2/pert/testing/coupPPE.test.005/srcmods/perturbed/all/clm'
+ls: cannot access '/glade/derecho/scratch/bbuchovecky/archive//rest': No such file or directory
+Building case in directory /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.005/IHistClm50Bgc.CPLHIST.historical.coupPPE.test.005.IHIST
+sharedlib_only is False
+model_only is False
+Generating component namelists as part of build
+ERROR: Reference case directory /glade/derecho/scratch/bbuchovecky/archive//rest/ does not exist or is not readable
+-----------------------------
+SUBMITTING /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.005/IHistClm50Bgc.CPLHIST.historical.coupPPE.test.005.IHIST
+-----------------------------

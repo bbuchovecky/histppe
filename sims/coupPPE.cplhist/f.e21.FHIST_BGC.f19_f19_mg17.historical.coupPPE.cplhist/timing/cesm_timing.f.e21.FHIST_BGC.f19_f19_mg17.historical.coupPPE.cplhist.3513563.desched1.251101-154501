@@ -1,0 +1,173 @@
+---------------- TIMING PROFILE ---------------------
+  Case        : f.e21.FHIST_BGC.f19_f19_mg17.historical.coupPPE.cplhist
+  LID         : 3513563.desched1.251101-154501
+  Machine     : derecho
+  Caseroot    : /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.cplhist/f.e21.FHIST_BGC.f19_f19_mg17.historical.coupPPE.cplhist
+  Timeroot    : /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.cplhist/f.e21.FHIST_BGC.f19_f19_mg17.historical.coupPPE.cplhist/Tools
+  User        : bbuchovecky
+  Curr Date   : Sat Nov  1 22:40:49 2025
+  grid        : a%1.9x2.5_l%1.9x2.5_oi%1.9x2.5_r%r05_g%gland4_w%null_m%gx1v7
+  compset     : HIST_CAM60_CLM50%BGC-CROP_CICE%PRES_DOCN%DOM_MOSART_CISM2%NOEVOLVE_SWAV
+  run_type    : hybrid, continue_run = TRUE (inittype = FALSE)
+  stop_option : nyears, stop_n = 5
+  run_length  : 1825 days (1825.0 for ocean)
+
+  component       comp_pes    root_pe   tasks  x threads instances (stride) 
+  ---------        ------     -------   ------   ------  ---------  ------  
+  cpl = cpl        256         0        256    x 1       1      (1     ) 
+  atm = cam        256         0        256    x 1       1      (1     ) 
+  lnd = clm        256         0        256    x 1       1      (1     ) 
+  ice = cice       256         0        256    x 1       1      (1     ) 
+  ocn = docn       256         0        256    x 1       1      (1     ) 
+  rof = mosart     256         0        256    x 1       1      (1     ) 
+  glc = cism       256         0        256    x 1       1      (1     ) 
+  wav = swav       256         0        256    x 1       1      (1     ) 
+  esp = sesp       1           0        1      x 1       1      (1     ) 
+
+  total pes active           : 256 
+  mpi tasks per node               : 128 
+  pe count for cost estimate : 256 
+
+  Overall Metrics: 
+    Model Cost:             353.64   pe-hrs/simulated_year 
+    Model Throughput:        17.37   simulated_years/day 
+
+    Init Time   :      72.077 seconds 
+    Run Time    :   24865.310 seconds       13.625 seconds/day 
+    Final Time  :       0.002 seconds 
+
+    Actual Ocn Init Wait Time     :       5.221 seconds 
+    Estimated Ocn Init Run Time   :       0.000 seconds 
+    Estimated Run Time Correction :       0.000 seconds 
+      (This correction has been applied to the ocean and total run times) 
+
+Runs Time in total seconds, seconds/model-day, and model-years/wall-day 
+CPL Run Time represents time in CPL pes alone, not including time associated with data exchange with other components 
+
+    TOT Run Time:   24865.310 seconds       13.625 seconds/mday        17.37 myears/wday 
+    CPL Run Time:     934.680 seconds        0.512 seconds/mday       462.19 myears/wday 
+    CPL COMM Time:   2321.702 seconds        1.272 seconds/mday       186.07 myears/wday 
+    ATM Run Time:   18021.024 seconds        9.875 seconds/mday        23.97 myears/wday 
+    CPL COMM Time:   2321.702 seconds        1.272 seconds/mday       186.07 myears/wday 
+    LND Run Time:    5526.785 seconds        3.028 seconds/mday        78.16 myears/wday 
+    CPL COMM Time:   2321.702 seconds        1.272 seconds/mday       186.07 myears/wday 
+    ICE Run Time:      91.453 seconds        0.050 seconds/mday      4723.74 myears/wday 
+    CPL COMM Time:   2321.702 seconds        1.272 seconds/mday       186.07 myears/wday 
+    OCN Run Time:      11.439 seconds        0.006 seconds/mday     37765.54 myears/wday 
+    CPL COMM Time:   2321.702 seconds        1.272 seconds/mday       186.07 myears/wday 
+    ROF Run Time:     320.707 seconds        0.176 seconds/mday      1347.02 myears/wday 
+    CPL COMM Time:   2321.702 seconds        1.272 seconds/mday       186.07 myears/wday 
+    GLC Run Time:       1.525 seconds        0.001 seconds/mday    283278.69 myears/wday 
+    CPL COMM Time:   2321.702 seconds        1.272 seconds/mday       186.07 myears/wday 
+    WAV Run Time:       0.000 seconds        0.000 seconds/mday         0.00 myears/wday 
+    CPL COMM Time:   2321.702 seconds        1.272 seconds/mday       186.07 myears/wday 
+    ESP Run Time:       0.000 seconds        0.000 seconds/mday         0.00 myears/wday 
+    CPL COMM Time:   2321.702 seconds        1.272 seconds/mday       186.07 myears/wday 
+
+
+---------------- DRIVER TIMING FLOWCHART --------------------- 
+
+   NOTE: min:max driver timers (seconds/day):   
+                            CPL (pes 0 to 255) 
+                                                OCN (pes 0 to 255) 
+                                                LND (pes 0 to 255) 
+                                                ROF (pes 0 to 255) 
+                                                ICE (pes 0 to 255) 
+                                                ATM (pes 0 to 255) 
+                                                GLC (pes 0 to 255) 
+                                                WAV (pes 0 to 255) 
+
+  CPL:CLOCK_ADVANCE           0.004:   0.004 
+  CPL:OCNPRE1                 0.004:   0.004 
+  CPL:LNDPREP                 0.001:   0.003 
+  CPL:C2L                        <---->           0.005:   0.007 
+  CPL:ICEPREP                 0.002:   0.002 
+  CPL:C2I                        <---->           0.005:   0.005 
+  CPL:ROFPREP                 0.006:   0.006 
+  CPL:C2R                        <---->           0.005:   0.006 
+  CPL:ICE_RUN                                     0.042:   0.050 
+  CPL:LND_RUN                                     2.311:   3.028 
+  CPL:ROF_RUN                                     0.052:   0.176 
+  CPL:OCNT_RUN                                    0.003:   0.006 
+  CPL:O2CT                       <---->           0.001:   0.478 
+  CPL:OCNPOSTT                0.000:   0.000 
+  CPL:ATMOCNP                 0.001:   0.004 
+  CPL:L2C                                         4.742: 233.282 
+  CPL:LNDPOST                 0.001:   0.001 
+  CPL:GLCPREP                 0.000:   0.000 
+  CPL:C2G                        <---->           0.000:   0.001 
+  CPL:R2C                        <---->           0.004:   0.005 
+  CPL:ROFPOST                 0.001:   0.002 
+  CPL:I2C                        <---->           0.004:   0.128 
+  CPL:ICEPOST                 0.000:   0.000 
+  CPL:FRACSET                 0.002:   0.003 
+  CPL:ATMPREP                 0.015:   0.018 
+  CPL:C2A                        <---->           0.008:   0.011 
+  CPL:ATM_RUN                                     9.193:   9.875 
+  CPL:GLC_RUN                                     0.001:   0.001 
+  CPL:G2C                        <---->           0.001:   0.020 
+  CPL:GLCPOST                 0.011:   0.017 
+  CPL:A2C                        <---->           0.060:   0.754 
+  CPL:ATMPOST                 0.000:   0.000 
+  CPL:RESTART                 0.000:   0.000 
+  CPL:HISTORY                 0.370:   0.460 
+  CPL:TSTAMP_WRITE            0.000:   0.000 
+  CPL:TPROF_WRITE             0.000:   0.000 
+  CPL:RUN_LOOP_BSTOP          0.000:   0.000 
+
+
+More info on coupler timing:
+
+  CPL:OCNPRE1                 0.004:   0.004 
+  CPL:ocnpre1_atm2ocn         0.003:   0.004 
+
+
+  CPL:LNDPREP                 0.001:   0.003 
+  CPL:lndprep_atm2lnd         0.001:   0.002 
+  CPL:lndprep_mrgx2l          0.001:   0.001 
+
+  CPL:ICEPREP                 0.002:   0.002 
+  CPL:iceprep_ocn2ice         0.000:   0.000 
+  CPL:iceprep_atm2ice         0.000:   0.001 
+  CPL:iceprep_mrgx2i          0.001:   0.001 
+
+
+  CPL:ROFPREP                 0.006:   0.006 
+  CPL:rofprep_l2xavg          0.000:   0.000 
+  CPL:rofprep_lnd2rof         0.006:   0.006 
+  CPL:rofprep_mrgx2r          0.000:   0.000 
+
+  CPL:GLCPREP                 0.000:   0.000 
+  CPL:glcprep_avg             0.000:   0.000 
+  CPL:glcprep_lnd2glc         0.000:   0.000 
+  CPL:glcprep_mrgx2g          0.000:   0.000 
+
+  CPL:ATMPREP                 0.015:   0.018 
+  CPL:atmprep_xao2atm         0.003:   0.003 
+  CPL:atmprep_ocn2atm         0.003:   0.003 
+  CPL:atmprep_alb2atm         0.001:   0.001 
+  CPL:atmprep_ice2atm         0.003:   0.003 
+  CPL:atmprep_lnd2atm         0.004:   0.007 
+  CPL:atmprep_mrgx2a          0.001:   0.001 
+
+  CPL:ATMOCNP                 0.001:   0.004 
+  CPL:atmocnp_fluxo           0.000:   0.003 
+  CPL:atmocnp_ocnalb          0.000:   0.001 
+
+
+  CPL:OCNPOSTT                0.000:   0.000 
+
+  CPL:LNDPOST                 0.001:   0.001 
+
+  CPL:rofpost_rof2lnd         0.001:   0.002 
+
+  CPL:ICEPOST                 0.000:   0.000 
+
+
+  CPL:GLCPOST                 0.011:   0.017 
+  CPL:glcpost_glc2lnd         0.011:   0.017 
+
+  CPL:ATMPOST                 0.000:   0.000 
+
+
+

@@ -1,0 +1,11 @@
+hist_empty_htapes = .true.
+hist_nhtfrq = -8760
+hist_mfilt = 10
+
+hist_fincl1 = 'TOTECOSYSC', 'TOTECOSYSN', 'TOTSOMC', 'TOTSOMN', 'TOTVEGC', 'TOTVEGN', 'TLAI', 'GPP', 'CPOOL', 'NPP', 'TWS','H2OSNO','NFIX'
+reseed_dead_plants=.false.
+
+use_init_interp=.true.
+pot_hmn_ign_counts_alpha = 0.008d00
+rh_low = 20.0d00
+paramfile = "/glade/u/home/bbuchovecky/projects/cpl_ppe_co2/pert/testing/coupPPE.test.005/paramfiles/coupPPE.test.005.nc"

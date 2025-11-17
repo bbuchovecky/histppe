@@ -1,0 +1,52 @@
+2025-11-02 12:47:10: ./create_clone --case /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.005/I1850Clm50Bgc.CPLHIST.historical.coupPPE.test.005.pAD --clone /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.005/I1850Clm50Bgc.CPLHIST.historical.coupPPE.test.005.AD
+ ---------------------------------------------------
+2025-11-02 12:47:10: Compset longname is 1850_DATM%CPLHIST_CLM50%BGC-CROP_SICE_SOCN_MOSART_CISM2%NOEVOLVE_SWAV
+ ---------------------------------------------------
+2025-11-02 12:47:10: Compset specification file is /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/../components/clm//cime_config/config_compsets.xml
+ ---------------------------------------------------
+2025-11-02 12:47:10: Pes     specification file is /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/../components/clm//cime_config/config_pes.xml
+ ---------------------------------------------------
+
+    *** original clone README follows ****
+ 2025-11-01 13:04:29: ./create_newcase --case /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.005/I1850Clm50Bgc.CPLHIST.historical.coupPPE.test.005.AD --compset 1850_DATM%CPLHIST_CLM50%BGC-CROP_SICE_SOCN_MOSART_CISM2%NOEVOLVE_SWAV --res f19_f19_mg17 --project UWAS0155 --mach derecho --run-unsupported
+ ---------------------------------------------------
+2025-11-01 13:04:29: Compset longname is 1850_DATM%CPLHIST_CLM50%BGC-CROP_SICE_SOCN_MOSART_CISM2%NOEVOLVE_SWAV
+ ---------------------------------------------------
+2025-11-01 13:04:29: Compset specification file is /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/components/clm//cime_config/config_compsets.xml
+ ---------------------------------------------------
+2025-11-01 13:04:29: Pes     specification file is /glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/components/clm//cime_config/config_pes.xml
+ ---------------------------------------------------
+2025-11-01 13:04:29: Forcing is 1850
+ ---------------------------------------------------
+2025-11-01 13:04:29: Using None coupler instances
+ ---------------------------------------------------
+2025-11-01 13:04:29: Component ATM is  Data driven ATM  Coupler hist data set (in this mode, it is strongly recommended that the model domain and the coupler history forcing are on the same domain)
+ ---------------------------------------------------
+2025-11-01 13:04:29: ATM_GRID is 1.9x2.5
+ ---------------------------------------------------
+2025-11-01 13:04:29: Component LND is clm5.0:BGC (vert. resol. CN and methane) with prognostic crop:
+ ---------------------------------------------------
+2025-11-01 13:04:29: LND_GRID is 1.9x2.5
+ ---------------------------------------------------
+2025-11-01 13:04:29: Component ICE is Stub ice component
+ ---------------------------------------------------
+2025-11-01 13:04:29: ICE_GRID is null
+ ---------------------------------------------------
+2025-11-01 13:04:29: Component OCN is Stub ocn component
+ ---------------------------------------------------
+2025-11-01 13:04:29: OCN_GRID is null
+ ---------------------------------------------------
+2025-11-01 13:04:29: Component ROF is MOSART: MOdel for Scale Adaptive River Transport
+ ---------------------------------------------------
+2025-11-01 13:04:29: ROF_GRID is r05
+ ---------------------------------------------------
+2025-11-01 13:04:29: Component GLC is cism2 (default, higher-order, can run in parallel):cism ice evolution turned off (this is the standard configuration unless you're explicitly interested in ice evolution):
+ ---------------------------------------------------
+2025-11-01 13:04:29: GLC_GRID is gland4
+ ---------------------------------------------------
+2025-11-01 13:04:29: Component WAV is Stub wave component
+ ---------------------------------------------------
+2025-11-01 13:04:29: WAV_GRID is null
+ ---------------------------------------------------
+2025-11-01 13:04:29: ESP_GRID is None
+ ---------------------------------------------------
