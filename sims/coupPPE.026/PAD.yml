@@ -1,0 +1,29 @@
+# detailing the spinup case and stability thresholds
+case: I1850Clm50Bgc.CPLHIST.historical.coupPPE.026.pAD
+hist_dir: /glade/derecho/scratch/bbuchovecky/archive/I1850Clm50Bgc.CPLHIST.historical.coupPPE.026.pAD/lnd/hist
+cycle_years: 20
+pct_landarea: 3
+thresholds:
+  TLAI_gridded: 0.002
+  TOTECOSYSC: 0.3
+  TOTVEGC: 0.1
+  GPP: 0.1
+cfs:  
+  TLAI_gridded: 1
+  TOTECOSYSC: 1e-9
+  TOTVEGC: 1e-9
+  GPP:
+    - 1e-9
+    - 86400
+    - 365
+units:  
+  TLAI_gridded: m2/m2
+  TOTECOSYSC: PgC
+  TOTVEGC: PgC
+  GPP: PgC
+data_vars:
+  - TLAI
+  - GPP
+  - TOTECOSYSC
+  - TOTVEGC
+

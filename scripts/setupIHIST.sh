@@ -22,7 +22,7 @@ CPLHIST_CASE="f.e21.FHIST_BGC.f19_f19_mg17.historical.coupPPE.cplhist"
 CPLHIST_DIR="/glade/derecho/scratch/bbuchovecky/archive/${CPLHIST_CASE}/cpl/proc/"
 CPLHIST_YR_ALIGN="1850"
 CPLHIST_YR_START="1850"
-CPLHIST_YR_END="1950"
+CPLHIST_YR_END="1949"
 
 
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -64,7 +64,7 @@ cat "${NAMELISTMODS}/${MEM}.txt" >> user_nl_clm
 
 
 # apply parameter file for parameter change
-echo -e "paramfile = \"${PARAMFILES}/${MEM}.nc\"" >> user_nl_clm
+echo -e "\nparamfile = \"${PARAMFILES}/${MEM}.nc\"" >> user_nl_clm
 
 
 ./xmlchange JOB_PRIORITY="regular"
@@ -72,14 +72,14 @@ echo -e "paramfile = \"${PARAMFILES}/${MEM}.nc\"" >> user_nl_clm
 ./xmlchange PROJECT=$PROJECT
 ./xmlchange RUN_STARTDATE="1850-01-01"
 ./xmlchange STOP_OPTION="nyears"
-./xmlchange STOP_N=50
+./xmlchange STOP_N=100
 ./xmlchange REST_OPTION="nyears"
-./xmlchange REST_N=50
-./xmlchange RESUBMIT=1
-./xmlchange JOB_WALLCLOCK_TIME="02:15:00" --subgroup case.run
+./xmlchange REST_N=25
+./xmlchange RESUBMIT=0
+./xmlchange JOB_WALLCLOCK_TIME="09:00:00" --subgroup case.run
 
 
-# finding the latest restart from AD
+# finding the latest restart from PAD
 # this code is likely very brittle
 ./xmlchange RUN_REFCASE=$REFCASE
 ./xmlchange GET_REFCASE="True"
@@ -107,5 +107,5 @@ mv "${FILENAME}.log" .
 
 cd $WDIR
 echo $CASENAME>case.txt
+# echo "python ${SDIR}/checkIHIST.py ${MEM}" > commands.txt
 rm commands.txt
-echo "${SDIR}/setupFHIST.sh ${MEM}"> commands.txt

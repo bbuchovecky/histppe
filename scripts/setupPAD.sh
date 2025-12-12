@@ -50,7 +50,7 @@ cat "${NAMELISTMODS}/${MEM}.txt" >> user_nl_clm
 
 
 # apply parameter file for parameter change
-echo -e "paramfile = \"${PARAMFILES}/${MEM}.nc\"" >> user_nl_clm
+echo -e "\nparamfile = \"${PARAMFILES}/${MEM}.nc\"" >> user_nl_clm
 
 
 ./xmlchange RUN_TYPE=hybrid

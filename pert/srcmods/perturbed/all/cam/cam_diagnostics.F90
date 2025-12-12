@@ -210,6 +210,7 @@ contains
 
     call addfld ('Z3',         (/ 'lev' /), 'A', 'm',         'Geopotential Height (above sea level)')
     call addfld ('Z1000',      horiz_only,  'A', 'm',         'Geopotential Z at 1000 mbar pressure surface')
+    call addfld ('Z850',       horiz_only,  'A', 'm',         'Geopotential Z at 850 mbar pressure surface') !BGB
     call addfld ('Z700',       horiz_only,  'A', 'm',         'Geopotential Z at 700 mbar pressure surface')
     call addfld ('Z500',       horiz_only,  'A', 'm',         'Geopotential Z at 500 mbar pressure surface')
     call addfld ('Z300',       horiz_only,  'A', 'm',         'Geopotential Z at 300 mbar pressure surface')
@@ -260,16 +261,19 @@ contains
     call addfld ('TT',         (/ 'lev' /), 'A', 'K2','Eddy temperature variance' )
 
     call addfld ('U850',       horiz_only,  'A', 'm/s','Zonal wind at 850 mbar pressure surface')
+    call addfld ('U700',       horiz_only,  'A', 'm/s','Zonal wind at 700 mbar pressure surface') !BGB
     call addfld ('U500',       horiz_only,  'A', 'm/s','Zonal wind at 500 mbar pressure surface')
     call addfld ('U250',       horiz_only,  'A', 'm/s','Zonal wind at 250 mbar pressure surface')
     call addfld ('U200',       horiz_only,  'A', 'm/s','Zonal wind at 200 mbar pressure surface')
     call addfld ('U010',       horiz_only,  'A', 'm/s','Zonal wind at  10 mbar pressure surface')
     call addfld ('V850',       horiz_only,  'A', 'm/s','Meridional wind at 850 mbar pressure surface')
+    call addfld ('V700',       horiz_only,  'A', 'm/s','Meridional wind at 700 mbar pressure surface') !BGB
     call addfld ('V500',       horiz_only,  'A', 'm/s','Meridional wind at 500 mbar pressure surface')
     call addfld ('V250',       horiz_only,  'A', 'm/s','Meridional wind at 250 mbar pressure surface')
     call addfld ('V200',       horiz_only,  'A', 'm/s','Meridional wind at 200 mbar pressure surface')
 
     call register_vector_field('U850', 'V850')
+    call register_vector_field('U700', 'V700') !BGB
     call register_vector_field('U500', 'V500')
     call register_vector_field('U250', 'V250')
     call register_vector_field('U200', 'V200')
@@ -432,18 +436,14 @@ contains
     ! outfld calls in diag_phys_writeout
     call addfld ('OMEGAQ',     (/ 'lev' /), 'A', 'kgPa/kgs', 'Vertical water transport' )
     call addfld ('VQ',         (/ 'lev' /), 'A', 'm/skg/kg',  'Meridional water transport')
-    !BGB zonal water transport
-    call addfld ('UQ',         (/ 'lev' /), 'A', 'm/skg/kg',  'Zonal water transport')
-    !BGB
+    call addfld ('UQ',         (/ 'lev' /), 'A', 'm/skg/kg',  'Zonal water transport') !BGB
     call addfld ('QQ',         (/ 'lev' /), 'A', 'kg2/kg2',   'Eddy moisture variance')
 
     call addfld ('MQ',         (/ 'lev' /), 'A', 'kg/m2','Water vapor mass in layer')
     call addfld ('TMQ',        horiz_only,  'A', 'kg/m2','Total (vertically integrated) precipitable water')
-    !BGB integrated vapor transport calculation
-    call addfld ('IVT',        horiz_only,  'A', 'kg/m/s','Total (vertically integrated) vapor transport')
-    call addfld ('uIVT',       horiz_only,  'A', 'kg/m/s','u-component (vertically integrated) vapor transport')
-    call addfld ('vIVT',       horiz_only,  'A', 'kg/m/s','v-component (vertically integrated) vapor transport')
-    !BGB
+    call addfld ('IVT',        horiz_only,  'A', 'kg/m/s','Total (vertically integrated) vapor transport') !BGB
+    call addfld ('uIVT',       horiz_only,  'A', 'kg/m/s','u-component (vertically integrated) vapor transport') !BGB
+    call addfld ('vIVT',       horiz_only,  'A', 'kg/m/s','v-component (vertically integrated) vapor transport') !BGB
     call addfld ('RELHUM',     (/ 'lev' /), 'A', 'percent','Relative humidity')
     call addfld ('RHW',        (/ 'lev' /), 'A', 'percent','Relative humidity with respect to liquid')
     call addfld ('RHI',        (/ 'lev' /), 'A', 'percent','Relative humidity with respect to ice')
@@ -455,6 +455,8 @@ contains
     call addfld ('Q1000',      horiz_only,  'A', 'kg/kg','Specific Humidity at 1000 mbar pressure surface')
     call addfld ('Q925',       horiz_only,  'A', 'kg/kg','Specific Humidity at 925 mbar pressure surface')
     call addfld ('Q850',       horiz_only,  'A', 'kg/kg','Specific Humidity at 850 mbar pressure surface')
+    call addfld ('Q700',       horiz_only,  'A', 'kg/kg','Specific Humidity at 700 mbar pressure surface') !BGB
+    call addfld ('Q500',       horiz_only,  'A', 'kg/kg','Specific Humidity at 500 mbar pressure surface') !BGB
     call addfld ('Q200',       horiz_only,  'A', 'kg/kg','Specific Humidity at 700 mbar pressure surface')
     call addfld ('QBOT',       horiz_only,  'A', 'kg/kg','Lowest model level water vapor mixing ratio')
 
@@ -977,6 +979,13 @@ contains
           extrapolate='Z', ln_interp=.true., ps=state%ps, phis=state%phis, tbot=state%t(:,pver))
       call outfld('Z1000    ', p_surf, pcols, lchnk)
     end if
+    !BGB
+    if (hist_fld_active('Z850')) then
+      call vertinterp(ncol, pcols, pver, state%pmid, 85000._r8, z3, p_surf, &
+          extrapolate='Z', ln_interp=.true., ps=state%ps, phis=state%phis, tbot=state%t(:,pver))
+      call outfld('Z850    ', p_surf, pcols, lchnk)
+    end if
+    !BGB
     if (hist_fld_active('Z700')) then
       call vertinterp(ncol, pcols, pver, state%pmid, 70000._r8, z3, p_surf, &
           extrapolate='Z', ln_interp=.true., ps=state%ps, phis=state%phis, tbot=state%t(:,pver))
@@ -1100,6 +1109,12 @@ contains
       call vertinterp(ncol, pcols, pver, state%pmid, 85000._r8, state%u, p_surf)
       call outfld('U850    ', p_surf, pcols, lchnk )
     end if
+    !BGB
+    if (hist_fld_active('U700')) then
+      call vertinterp(ncol, pcols, pver, state%pmid, 70000._r8, state%u, p_surf)
+      call outfld('U700    ', p_surf, pcols, lchnk )
+    end if
+    !BGB
     if (hist_fld_active('U500')) then
       call vertinterp(ncol, pcols, pver, state%pmid, 50000._r8, state%u, p_surf)
       call outfld('U500    ', p_surf, pcols, lchnk )
@@ -1120,6 +1135,12 @@ contains
       call vertinterp(ncol, pcols, pver, state%pmid, 85000._r8, state%v, p_surf)
       call outfld('V850    ', p_surf, pcols, lchnk )
     end if
+    !BGB
+    if (hist_fld_active('V700')) then
+      call vertinterp(ncol, pcols, pver, state%pmid, 70000._r8, state%v, p_surf)
+      call outfld('V700    ', p_surf, pcols, lchnk )
+    end if
+    !BGB
     if (hist_fld_active('V500')) then
       call vertinterp(ncol, pcols, pver, state%pmid, 50000._r8, state%v, p_surf)
       call outfld('V500    ', p_surf, pcols, lchnk )
@@ -1399,6 +1420,16 @@ contains
       call vertinterp(ncol, pcols, pver, state%pmid, 85000._r8, state%q(1,1,1), p_surf)
       call outfld('Q850    ', p_surf, pcols, lchnk )
     end if
+    !BGB
+    if (hist_fld_active('Q500')) then
+      call vertinterp(ncol, pcols, pver, state%pmid, 50000._r8, state%q(1,1,1), p_surf)
+      call outfld('Q500    ', p_surf, pcols, lchnk )
+    end if
+    if (hist_fld_active('Q700')) then
+      call vertinterp(ncol, pcols, pver, state%pmid, 70000._r8, state%q(1,1,1), p_surf)
+      call outfld('Q700    ', p_surf, pcols, lchnk )
+    end if
+    !BGB
     if (hist_fld_active('Q200')) then
       call vertinterp(ncol, pcols, pver, state%pmid, 20000._r8, state%q(1,1,1), p_surf)
       call outfld('Q200    ', p_surf, pcols, lchnk )

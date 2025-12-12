@@ -32,7 +32,7 @@ foreach val ($cpl_prefixes)
          ncrcat $FILEPATTERN.$val.$year-$month-* $FILEPATTERN_PROC.$val.$year-$month.nc
          
          # Add doma_lat and doma_lon etc variables... probably just to month 1, but give it to all of them to play it safe and see if that fixes the problem
-         ncks -A -v doma_lat,doma_lon,doma_area,doma_area,doma_aream,doma_mask,doma_frac $FILEPATTERN.ha2x1h.1880-01-01.nc $FILEPATTERN_PROC.$val.$year-$month.nc
+         ncks -A -v doma_lat,doma_lon,doma_area,doma_area,doma_aream,doma_mask,doma_frac $FILEPATTERN.ha2x1h.1850-01-01.nc $FILEPATTERN_PROC.$val.$year-$month.nc
       end
    end
 end

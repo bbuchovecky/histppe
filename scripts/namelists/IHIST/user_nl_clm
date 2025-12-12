@@ -1,8 +1,9 @@
-hist_nhtfrq=0,-24
-hist_mfilt=1,365
-
-hist_fincl2='FSNO:A','H2OSNO:A','QRUNOFF:A','RAIN:A','SNOW:A','SOILWATER_10CM:A','TREFMNAV_U:A','TREFMNAV_R:A','TREFMXAV_U:A','TREFMXAV_R:A'
+hist_nhtfrq(1)=0
+hist_mfilt(1)=1
+hist_fexcl1 = 'CWDC_vr','CWDN_vr','LITR1C_vr','LITR1N_vr','LITR2C_vr','LITR2N_vr','LITR3C_vr','LITR3N_vr','SMIN_NH4_vr','SMIN_NO3_vr','SMINN_vr','SOIL1C_vr','SOIL1N_vr','SOIL2C_vr','SOIL2N_vr','SOIL3C_vr','SOIL3N_vr','SOILC_vr','SOILN_vr'
 
 use_init_interp=.true.
-pot_hmn_ign_counts_alpha = 0.008d00
-rh_low = 20.0d00
+
+! Adjustments to fire from Daniel Kennedy's scripts (just copied over and kept...)
+pot_hmn_ign_counts_alpha = 0.008d00  ! Potential human ignition counts (alpha in Li et. al. 2012) (/person/month) -- default = 0.0035_r8
+rh_low = 20.0d00                     ! Relative humidty low (%) -- default = 30.0_r8

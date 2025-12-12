@@ -1,0 +1,46 @@
+-----------------------------
+TETHER COMMANDS:
+-----------------------------
+./setupAD.sh coupPPE.test.000
+-----------------------------
+/glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.000/setupAD
+bbuchovecky
+25-10-28T12:12:23
+caseroot: /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.000/I1850Clm50Bgc.CPLHIST.historical.coupPPE.test.000.AD
+/glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/scripts/Tools/../../scripts/lib/CIME/utils.py:159: SyntaxWarning: invalid escape sequence '\]'
+  chars = '+*?<>/{}[\]~`@:' # pylint: disable=anomalous-backslash-in-string
+Traceback (most recent call last):
+  File "/glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/scripts/./create_newcase", line 7, in <module>
+    from Tools.standard_script_setup import *
+  File "/glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/scripts/Tools/standard_script_setup.py", line 16, in <module>
+    import CIME.utils
+  File "/glade/u/home/bbuchovecky/cesm_source/cesm2.1.5/cime/scripts/Tools/../../scripts/lib/CIME/utils.py", line 6, in <module>
+    import io, logging, gzip, sys, os, time, re, shutil, glob, string, random, imp, fnmatch
+ModuleNotFoundError: No module named 'imp'
+./setupAD.sh: line 48: cd: /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.000/I1850Clm50Bgc.CPLHIST.historical.coupPPE.test.000.AD: No such file or directory
+./setupAD.sh: line 49: ./case.setup: No such file or directory
+cp: target './SourceMods/src.clm/' is not a directory
+cp: cannot create regular file './SourceMods/src.clm/': No such file or directory
+cp: cannot stat '/glade/u/home/bbuchovecky/projects/cpl_ppe_co2/scripts/testing/coupPPE.test.000/namelists/AD/*': No such file or directory
+./setupAD.sh: line 72: ./xmlchange: No such file or directory
+./setupAD.sh: line 73: ./xmlchange: No such file or directory
+./setupAD.sh: line 74: ./xmlchange: No such file or directory
+./setupAD.sh: line 75: ./xmlchange: No such file or directory
+./setupAD.sh: line 76: ./xmlchange: No such file or directory
+./setupAD.sh: line 77: ./xmlchange: No such file or directory
+./setupAD.sh: line 78: ./xmlchange: No such file or directory
+./setupAD.sh: line 79: ./xmlchange: No such file or directory
+./setupAD.sh: line 82: ./xmlchange: No such file or directory
+./setupAD.sh: line 83: ./xmlchange: No such file or directory
+./setupAD.sh: line 84: ./xmlchange: No such file or directory
+./setupAD.sh: line 85: ./xmlchange: No such file or directory
+./setupAD.sh: line 86: ./xmlchange: No such file or directory
+./setupAD.sh: line 87: ./xmlchange: No such file or directory
+./setupAD.sh: line 88: ./xmlchange: No such file or directory
+./setupAD.sh: line 89: ./xmlchange: No such file or directory
+./setupAD.sh: line 90: ./xmlchange: No such file or directory
+./setupAD.sh: line 91: ./xmlchange: No such file or directory
+./setupAD.sh: line 94: ./case.build: No such file or directory
+-----------------------------
+SUBMITTING /glade/u/home/bbuchovecky/projects/cpl_ppe_co2/sims/coupPPE.test.000/I1850Clm50Bgc.CPLHIST.historical.coupPPE.test.000.AD
+-----------------------------

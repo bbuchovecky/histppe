@@ -21,7 +21,6 @@ if [[ "${status}" == "11" ]]; then
 elif [[ "$status" == "0" ]]; then
     echo "PAD spinup appears sufficient"
     ${SDIR}/setupIHIST.sh $MEM
-    # rm commands.txt # stop here while waiting for cplhist to reach 1950
 else
     echo "something looks wrong, halting tether"
     rm commands.txt
