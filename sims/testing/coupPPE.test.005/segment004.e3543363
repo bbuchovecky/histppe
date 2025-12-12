@@ -1,9 +1,0 @@
-ERROR: Reference case directory /glade/derecho/scratch/bbuchovecky/archive/f.e21.FHIST_BGC.f19_f19_mg17.historical.coupPPE.cplhist/rest/1950-01-01 does not exist or is not readable
-qsub: illegal -W value
-usage: qsub [-a date_time] [-A account_string] [-c interval]
-	[-C directive_prefix] [-e path] [-f ] [-h ] [-I [-X]] [-j oe|eo] [-J X-Y[:Z]]
-	[-k keep] [-l resource_list] [-m mail_options] [-M user_list]
-	[-N jobname] [-o path] [-p priority] [-P project] [-q queue] [-r y|n]
-	[-R o|e|oe] [-S path] [-u user_list] [-W otherattributes=value...]
-	[-v variable_list] [-V ] [-z] [script | -- command [arg1 ...]]
-       qsub --version
